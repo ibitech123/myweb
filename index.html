@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Naplan club</title>
+    <title>Landing Page</title>
     <style>
-        /* Body style */
+        /* Body Style */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #e5e5e5;
+            background-color: #f5f5f5;
             color: #333;
         }
 
-        /* Header Section */
+        /* Header Styling */
         .header {
-            background-color: #2196F3;
+            background-color: #4CAF50;
             color: white;
             padding: 20px;
             text-align: center;
@@ -24,79 +24,70 @@
 
         .header h1 {
             margin: 0;
-            font-size: 32px;
+            font-size: 28px;
         }
 
-        /* Button Styles */
-        .buttons {
-            margin-top: 15px;
-        }
-
-        .buttons button {
+        .header .buttons button {
             background-color: #333;
             color: white;
             border: none;
-            padding: 12px 25px;
-            margin: 5px;
+            padding: 10px 20px;
+            margin: 10px;
             cursor: pointer;
-            border-radius: 5px;
+            border-radius: 4px;
             font-size: 16px;
-            transition: background-color 0.3s ease;
         }
 
-        .buttons button:hover {
+        .header .buttons button:hover {
             background-color: #555;
         }
 
-        /* Navigation Bar */
+        /* Navigation Bar Styling */
         .nav-bar {
             background-color: #333;
-            padding: 10px 0;
             text-align: center;
+            padding: 10px 0;
         }
 
         .nav-bar a {
             text-decoration: none;
             color: white;
-            padding: 12px 25px;
-            margin: 0 15px;
+            padding: 15px 20px;
+            margin: 0 10px;
             display: inline-block;
             font-size: 18px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
         }
 
         .nav-bar a:hover {
-            background-color: #555;
+            background-color: #444;
+            border-radius: 4px;
         }
 
-        /* Content Section */
+        /* Content Section Styling */
         .content {
             padding: 30px;
             text-align: center;
         }
 
         .content h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
+            font-size: 24px;
         }
 
         .content p {
-            font-size: 18px;
+            font-size: 16px;
             color: #666;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .buttons button {
-                width: 100%;
-                padding: 10px;
+            .nav-bar a {
+                display: block;
                 margin: 5px 0;
             }
 
-            .nav-bar a {
-                display: block;
-                padding: 15px 0;
+            .header .buttons button {
+                width: 100%;
                 margin: 5px 0;
             }
         }
@@ -106,7 +97,7 @@
 
     <!-- Header Section -->
     <div class="header">
-        <h1>Naplan club</h1>
+        <h1>Landing Page</h1>
         <div class="buttons">
             <button onclick="alert('Login clicked')">Login</button>
             <button onclick="alert('Register clicked')">Register</button>
@@ -124,9 +115,8 @@
 
     <!-- Content Section -->
     <div class="content">
-        <h2>Welcome to Napan club</h2>
+        <h2>Welcome to the Naplan club home menu</h2>
         <p>Select a year from the navigation bar to get started.</p>
-        <p>its absaloutly free we support that education is key to sucsess</div><p>
     </div>
 
 </body>
