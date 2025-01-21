@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
     <style>
-        /* Body Style */
+        /* Body style */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
+            background-color: #e5e5e5;
             color: #333;
         }
 
-        /* Header Styling */
+        /* Header Section */
         .header {
-            background-color: #4CAF50;
+            background-color: #2196F3;
             color: white;
             padding: 20px;
             text-align: center;
@@ -24,70 +24,79 @@
 
         .header h1 {
             margin: 0;
-            font-size: 28px;
+            font-size: 32px;
         }
 
-        .header .buttons button {
+        /* Button Styles */
+        .buttons {
+            margin-top: 15px;
+        }
+
+        .buttons button {
             background-color: #333;
             color: white;
             border: none;
-            padding: 10px 20px;
-            margin: 10px;
+            padding: 12px 25px;
+            margin: 5px;
             cursor: pointer;
-            border-radius: 4px;
+            border-radius: 5px;
             font-size: 16px;
+            transition: background-color 0.3s ease;
         }
 
-        .header .buttons button:hover {
+        .buttons button:hover {
             background-color: #555;
         }
 
-        /* Navigation Bar Styling */
+        /* Navigation Bar */
         .nav-bar {
             background-color: #333;
-            text-align: center;
             padding: 10px 0;
+            text-align: center;
         }
 
         .nav-bar a {
             text-decoration: none;
             color: white;
-            padding: 15px 20px;
-            margin: 0 10px;
+            padding: 12px 25px;
+            margin: 0 15px;
             display: inline-block;
             font-size: 18px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
         }
 
         .nav-bar a:hover {
-            background-color: #444;
-            border-radius: 4px;
+            background-color: #555;
         }
 
-        /* Content Section Styling */
+        /* Content Section */
         .content {
             padding: 30px;
             text-align: center;
         }
 
         .content h2 {
-            margin-bottom: 10px;
-            font-size: 24px;
+            font-size: 28px;
+            margin-bottom: 20px;
         }
 
         .content p {
-            font-size: 16px;
+            font-size: 18px;
             color: #666;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .nav-bar a {
-                display: block;
+            .buttons button {
+                width: 100%;
+                padding: 10px;
                 margin: 5px 0;
             }
 
-            .header .buttons button {
-                width: 100%;
+            .nav-bar a {
+                display: block;
+                padding: 15px 0;
                 margin: 5px 0;
             }
         }
