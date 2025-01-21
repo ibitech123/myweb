@@ -5,37 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
     <style>
+        /* Basic Body Styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
         }
 
+        /* Header Styling */
         .header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #333;
+            background-color: #4CAF50;
             color: white;
-            padding: 10px 20px;
+            padding: 15px 30px;
+        }
+
+        .header h1 {
+            margin: 0;
         }
 
         .header .buttons button {
-            background-color: #555;
+            background-color: #333;
             color: white;
             border: none;
             padding: 10px 15px;
-            margin: 0 5px;
+            margin-left: 10px;
             cursor: pointer;
-            border-radius: 5px;
+            border-radius: 4px;
         }
 
         .header .buttons button:hover {
-            background-color: #777;
+            background-color: #555;
         }
 
+        /* Navigation Bar Styling */
         .nav-bar {
-            background-color: #444;
+            background-color: #333;
         }
 
         .nav-bar ul {
@@ -43,62 +52,51 @@
             margin: 0;
             padding: 0;
             display: flex;
-            position: relative;
+            justify-content: center;
         }
 
         .nav-bar li {
             position: relative;
         }
 
-        .nav-bar > ul > li {
-            flex: 1;
-        }
-
         .nav-bar a {
             text-decoration: none;
             color: white;
+            padding: 15px 25px;
             display: block;
-            padding: 15px;
             text-align: center;
         }
 
         .nav-bar a:hover {
-            background-color: #666;
-        }
-
-        .nav-bar .submenu {
-            display: none;
-            position: absolute;
             background-color: #555;
-            top: 100%;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
         }
 
-        .nav-bar .submenu a {
-            text-decoration: none;
-            color: white;
-            padding: 10px;
-            display: block;
-            text-align: left;
-        }
-
-        .nav-bar .submenu a:hover {
-            background-color: #777;
-        }
-
-        .nav-bar li:hover .submenu {
-            display: block;
-        }
-
+        /* Content Section */
         .content {
-            padding: 20px;
+            padding: 30px;
             text-align: center;
+            background-color: #fff;
+        }
+
+        /* Simplified Responsive Design */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .nav-bar ul {
+                flex-direction: column;
+            }
+
+            .nav-bar a {
+                padding: 10px;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Header Section -->
     <div class="header">
         <h1>Landing Page</h1>
         <div class="buttons">
@@ -108,50 +106,20 @@
         </div>
     </div>
 
+    <!-- Navigation Bar -->
     <div class="nav-bar">
         <ul>
-            <li>
-                <a href="#">Year 3</a>
-                <div class="submenu">
-                    <a href="#">Maths</a>
-                    <a href="#">Reading Comprehension</a>
-                    <a href="#">Language Convention</a>
-                    <a href="#">Writing</a>
-                </div>
-            </li>
-            <li>
-                <a href="#">Year 5</a>
-                <div class="submenu">
-                    <a href="#">Maths</a>
-                    <a href="#">Reading Comprehension</a>
-                    <a href="#">Language Convention</a>
-                    <a href="#">Writing</a>
-                </div>
-            </li>
-            <li>
-                <a href="#">Year 7</a>
-                <div class="submenu">
-                    <a href="#">Maths</a>
-                    <a href="#">Reading Comprehension</a>
-                    <a href="#">Language Convention</a>
-                    <a href="#">Writing</a>
-                </div>
-            </li>
-            <li>
-                <a href="#">Year 9</a>
-                <div class="submenu">
-                    <a href="#">Maths</a>
-                    <a href="#">Reading Comprehension</a>
-                    <a href="#">Language Convention</a>
-                    <a href="#">Writing</a>
-                </div>
-            </li>
+            <li><a href="#">Year 3</a></li>
+            <li><a href="#">Year 5</a></li>
+            <li><a href="#">Year 7</a></li>
+            <li><a href="#">Year 9</a></li>
         </ul>
     </div>
 
+    <!-- Content Section -->
     <div class="content">
         <h2>Welcome to the Landing Page</h2>
-        <p>Select a year and subject from the navigation bar to get started.</p>
+        <p>Select a year from the navigation bar to get started.</p>
     </div>
 </body>
 </html>
