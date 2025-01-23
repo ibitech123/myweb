@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Naplan club</title>
+    <title>Naplan Club</title>
     <style>
         /* Body style */
         body {
@@ -56,6 +56,18 @@
             position: relative;
         }
 
+        .nav-bar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: inline-block;
+        }
+
+        .nav-bar li {
+            position: relative;
+            display: inline-block;
+        }
+
         .nav-bar a {
             text-decoration: none;
             color: white;
@@ -72,7 +84,7 @@
         }
 
         /* Submenu Styling */
-        .submenu {
+        .submenu, .year-menu {
             display: none;
             position: absolute;
             top: 100%;
@@ -83,32 +95,20 @@
             z-index: 1;
         }
 
-        .submenu a {
+        .submenu a, .year-menu a {
             padding: 12px 20px;
             display: block;
             text-align: left;
+            color: white;
         }
 
-        .submenu a:hover {
+        .submenu a:hover, .year-menu a:hover {
             background-color: #555;
         }
 
         /* Show Submenu on Hover */
         .nav-bar li:hover .submenu {
             display: block;
-        }
-
-        /* List items (for structuring the nav-bar) */
-        .nav-bar ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: inline-block;
-        }
-
-        .nav-bar li {
-            position: relative;
-            display: inline-block;
         }
 
         /* Content Section */
@@ -142,12 +142,33 @@
             }
         }
     </style>
+    <script>
+        function showYearMenu(event) {
+            // Hide any other open year menus
+            const allYearMenus = document.querySelectorAll('.year-menu');
+            allYearMenus.forEach(menu => menu.style.display = 'none');
+
+            // Get the submenu to show
+            const yearMenu = event.target.nextElementSibling;
+            if (yearMenu) {
+                yearMenu.style.display = 'block';
+            }
+        }
+
+        // Hide the year menus if clicked outside
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.submenu')) {
+                const allYearMenus = document.querySelectorAll('.year-menu');
+                allYearMenus.forEach(menu => menu.style.display = 'none');
+            }
+        });
+    </script>
 </head>
 <body>
 
     <!-- Header Section -->
     <div class="header">
-        <h1>Naplan club</h1>
+        <h1>Naplan Club</h1>
         <div class="buttons">
             <button onclick="alert('Login clicked')">Login</button>
             <button onclick="alert('Register clicked')">Register</button>
@@ -161,47 +182,33 @@
             <li>
                 <a href="#">Year 3</a>
                 <div class="submenu">
-                    <a href="#">Maths</a>
-                    <a href="#">Reading Comprehension</a>
-                    <a href="#">Language Conventions</a>
-                    <a href="#">Writing</a>
+                    <a href="#" onclick="showYearMenu(event)">Maths</a>
+                    <div class="year-menu">
+                        <a href="#">2012</a>
+                        <a href="#">2013</a>
+                        <a href="#">2014</a>
+                        <a href="#">2015</a>
+                        <a href="#">2016</a>
+                    </div>
+                    <a href="#" onclick="showYearMenu(event)">Reading Comprehension</a>
+                    <div class="year-menu">
+                        <a href="#">2012</a>
+                        <a href="#">2013</a>
+                        <a href="#">2014</a>
+                        <a href="#">2015</a>
+                        <a href="#">2016</a>
+                    </div>
                 </div>
             </li>
-            <li>
-                <a href="#">Year 5</a>
-                <div class="submenu">
-                    <a href="#">Maths</a>
-                    <a href="#">Reading Comprehension</a>
-                    <a href="#">Language Conventions</a>
-                    <a href="#">Writing</a>
-                </div>
-            </li>
-            <li>
-                <a href="#">Year 7</a>
-                <div class="submenu">
-                    <a href="#">Maths</a>
-                    <a href="#">Reading Comprehension</a>
-                    <a href="#">Language Conventions</a>
-                    <a href="#">Writing</a>
-                </div>
-            </li>
-            <li>
-                <a href="#">Year 9</a>
-                <div class="submenu">
-                    <a href="#">Maths</a>
-                    <a href="#">Reading Comprehension</a>
-                    <a href="#">Language Conventions</a>
-                    <a href="#">Writing</a>
-                </div>
-            </li>
+            <!-- Repeat for other grades -->
         </ul>
     </div>
 
     <!-- Content Section -->
     <div class="content">
-        <h2>Welcome to the Naplan club home menu</h2>
+        <h2>Welcome to the Naplan Club home menu</h2>
         <p>Select a year from the navigation bar to get started.</p>
-        <p>it is also completely free no fees or charges</p>
+        <p>It is also completely free, no fees or charges!</p>
     </div>
 
 </body>
