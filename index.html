@@ -83,6 +83,60 @@
             background-color: #555;
         }
 
+        /* Submenu Styling */
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #444;
+            min-width: 200px;
+            text-align: left;
+            z-index: 1;
+        }
+
+        .submenu a {
+            padding: 12px 20px;
+            display: block;
+            color: white;
+        }
+
+        .submenu a:hover {
+            background-color: #555;
+        }
+
+        /* Submenu appears on hover */
+        .nav-bar li:hover .submenu {
+            display: block;
+        }
+
+        /* Year menu appears on the right */
+        .year-menu {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            background-color: #555;
+            min-width: 150px;
+            text-align: left;
+            z-index: 2;
+        }
+
+        .year-menu a {
+            padding: 12px 15px;
+            display: block;
+            color: white;
+        }
+
+        .year-menu a:hover {
+            background-color: #666;
+        }
+
+        /* Show year menu on hover of subject */
+        .submenu a:hover + .year-menu {
+            display: block;
+        }
+
         /* Content Section */
         .content {
             padding: 30px;
@@ -171,10 +225,158 @@
     <!-- Navigation Bar -->
     <div class="nav-bar">
         <ul>
-            <li><a href="#">Year 3</a></li>
-            <li><a href="#">Year 5</a></li>
-            <li><a href="#">Year 7</a></li>
-            <li><a href="#">Year 9</a></li>
+            <!-- Year 3 -->
+            <li>
+                <a href="#">Year 3</a>
+                <div class="submenu">
+                    <a href="#">Maths</a>
+                    <div class="year-menu">
+                        <a href="#">2012</a>
+                        <a href="#">2013</a>
+                        <a href="#">2014</a>
+                        <a href="#">2015</a>
+                        <a href="#">2016</a>
+                    </div>
+                    <a href="#">Reading Comprehension</a>
+                    <div class="year-menu">
+                        <a href="#">2012</a>
+                        <a href="#">2013</a>
+                        <a href="#">2014</a>
+                        <a href="#">2015</a>
+                        <a href="#">2016</a>
+                    </div>
+                    <a href="#">Language Conventions</a>
+                    <div class="year-menu">
+                        <a href="#">2012</a>
+                        <a href="#">2013</a>
+                        <a href="#">2014</a>
+                        <a href="#">2015</a>
+                        <a href="#">2016</a>
+                    </div>
+                    <a href="#">Writing</a>
+                    <div class="year-menu">
+                        <a href="#">2012</a>
+                        <a href="#">2013</a>
+                        <a href="#">2014</a>
+                        <a href="#">2015</a>
+                        <a href="#">2016</a>
+                    </div>
+                </div>
+            </li>
+            <!-- Year 5 -->
+            <li>
+                <a href="#">Year 5</a>
+                <div class="submenu">
+                    <a href="#">Maths</a>
+                    <div class="year-menu">
+                        <a href="#">2012</a>
+                        <a href="#">2013</a>
+                        <a href="#">2014</a>
+                        <a href="#">2015</a>
+                        <a href="#">2016</a>
+                    </div>
+                    <a href="#">Reading Comprehension</a>
+                    <div class="year-menu">
+                        <a href="#">2012</a>
+                        <a href="#">2013</a>
+                        <a href="#">2014</a>
+                        <a href="#">2015</a>
+                        <a href="#">2016</a>
+                    </div>
+                    <a href="#">Language Conventions</a>
+                    <div class="year-menu">
+                        <a href="#">2012</a>
+                        <a href="#">2013</a>
+                        <a href="#">2014</a>
+                        <a href="#">2015</a>
+                        <a href="#">2016</a>
+                    </div>
+                    <a href="#">Writing</a>
+                    <div class="year-menu">
+                        <a href="#">2012</a>
+                        <a href="#">2013</a>
+                        <a href="#">2014</a>
+                        <a href="#">2015</a>
+                        <a href="#">2016</a>
+                    </div>
+                </div>
+            </li>
+            <!-- Year 7 -->
+            <li>
+                <a href="#">Year 7</a>
+                <div class="submenu">
+                    <a href="#">Maths</a>
+                    <div class="year-menu">
+                        <a href="#">2012</a>
+                        <a href="#">2013</a>
+                        <a href="#">2014</a>
+                        <a href="#">2015</a>
+                        <a href="#">2016</a>
+                    </div>
+                    <a href="#">Reading Comprehension</a>
+                    <div class="year-menu">
+                        <a href="#">2012</a>
+                        <a href="#">2013</a>
+                        <a href="#">2014</a>
+                        <a href="#">2015</a>
+                        <a href="#">2016</a>
+                    </div>
+                    <a href="#">Language Conventions</a>
+                    <div class="year-menu">
+                        <a href="#">2012</a>
+                        <a href="#">2013</a>
+                        <a href="#">2014</a>
+                        <a href="#">2015</a>
+                        <a href="#">2016</a>
+                    </div>
+                    <a href="#">Writing</a>
+                    <div class="year-menu">
+                        <a href="#">2012</a>
+                        <a href="#">2013</a>
+                        <a href="#">2014</a>
+                        <a href="#">2015</a>
+                        <a href="#">2016</a>
+                    </div>
+                </div>
+            </li>
+            <!-- Year 9 -->
+            <li>
+                <a href="#">Year 9</a>
+                <div class="submenu">
+                    <a href="#">Maths</a>
+                    <div class="year-menu">
+                        <a href="#">2012</a>
+                        <a href="#">2013</a>
+                        <a href="#">2014</a>
+                        <a href="#">2015</a>
+                        <a href="#">2016</a>
+                    </div>
+                    <a href="#">Reading Comprehension</a>
+                    <div class="year-menu">
+                        <a href="#">2012</a>
+                        <a href="#">2013</a>
+                        <a href="#">2014</a>
+                        <a href="#">2015</a>
+                        <a href="#">2016</a>
+                    </div>
+                    <a href="#">Language Conventions</a>
+                    <div class="year-menu">
+                        <a href="#">2012</a>
+                        <a href="#">2013</a>
+                        <a href="#">2014</a>
+                        <a href="#">2015</a>
+                        <a href="#">2016</a>
+                    </div>
+                    <a href="#">Writing</a>
+                    <div class="year-menu">
+                        <a href="#">2012</a>
+                        <a href="#">2013</a>
+                        <a href="#">2014</a>
+                        <a href="#">2015</a>
+                        <a href="#">2016</a>
+                    </div>
+                </div>
+            </li>
         </ul>
     </div>
 
@@ -199,10 +401,4 @@
         </div>
         <!-- Card 3: Free Payment Plans & Services -->
         <div class="card">
-            <h3>Free Payment Plans & Services</h3>
-            <p>Our services are completely free. Enjoy full access to all study materials and resources without any hidden fees.</p>
-        </div>
-    </div>
-
-</body>
-</html>
+            <h
