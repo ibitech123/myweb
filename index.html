@@ -133,8 +133,20 @@
         }
 
         /* Show year menu on hover of subject */
-        .submenu a:hover + .year-menu {
+        .submenu a:hover + .year-menu,
+        .year-menu:hover {
             display: block;
+        }
+
+        /* Ensure submenu and year-menu stay visible when hovered */
+        .nav-bar li:hover .submenu:hover {
+            display: block;
+        }
+
+        /* Remove gaps between submenu and year-menu */
+        .submenu, .year-menu {
+            margin: 0;
+            padding: 0;
         }
 
         /* Content Section */
@@ -226,7 +238,6 @@
     <!-- Navigation Bar -->
     <div class="nav-bar">
         <ul>
-            <!-- Year 3 -->
             <li>
                 <a href="#">Year 3</a>
                 <div class="submenu">
@@ -238,146 +249,9 @@
                         <a href="#">2015</a>
                         <a href="#">2016</a>
                     </div>
-                    <a href="#">Reading </a>
-                    <div class="year-menu">
-                        <a href="#">2012</a>
-                        <a href="#">2013</a>
-                        <a href="#">2014</a>
-                        <a href="#">2015</a>
-                        <a href="#">2016</a>
-                    </div>
-                    <a href="#">Language Conventions</a>
-                    <div class="year-menu">
-                        <a href="#">2012</a>
-                        <a href="#">2013</a>
-                        <a href="#">2014</a>
-                        <a href="#">2015</a>
-                        <a href="#">2016</a>
-                    </div>
-                    <a href="#">Writing</a>
-                    <div class="year-menu">
-                        <a href="#">2012</a>
-                        <a href="#">2013</a>
-                        <a href="#">2014</a>
-                        <a href="#">2015</a>
-                        <a href="#">2016</a>
-                    </div>
                 </div>
             </li>
-            <!-- Year 5 -->
-            <li>
-                <a href="#">Year 5</a>
-                <div class="submenu">
-                    <a href="#">Numeracy</a>
-                    <div class="year-menu">
-                        <a href="#">2012</a>
-                        <a href="#">2013</a>
-                        <a href="#">2014</a>
-                        <a href="#">2015</a>
-                        <a href="#">2016</a>
-                    </div>
-                    <a href="#">Reading </a>
-                    <div class="year-menu">
-                        <a href="#">2012</a>
-                        <a href="#">2013</a>
-                        <a href="#">2014</a>
-                        <a href="#">2015</a>
-                        <a href="#">2016</a>
-                    </div>
-                    <a href="#">Language Conventions</a>
-                    <div class="year-menu">
-                        <a href="#">2012</a>
-                        <a href="#">2013</a>
-                        <a href="#">2014</a>
-                        <a href="#">2015</a>
-                        <a href="#">2016</a>
-                    </div>
-                    <a href="#">Writing</a>
-                    <div class="year-menu">
-                        <a href="#">2012</a>
-                        <a href="#">2013</a>
-                        <a href="#">2014</a>
-                        <a href="#">2015</a>
-                        <a href="#">2016</a>
-                    </div>
-                </div>
-            </li>
-            <!-- Year 7 -->
-            <li>
-                <a href="#">Year 7</a>
-                <div class="submenu">
-                    <a href="#">Numeracy</a>
-                    <div class="year-menu">
-                        <a href="#">2012</a>
-                        <a href="#">2013</a>
-                        <a href="#">2014</a>
-                        <a href="#">2015</a>
-                        <a href="#">2016</a>
-                    </div>
-                    <a href="#">Reading</a>
-                    <div class="year-menu">
-                        <a href="#">2012</a>
-                        <a href="#">2013</a>
-                        <a href="#">2014</a>
-                        <a href="#">2015</a>
-                        <a href="#">2016</a>
-                    </div>
-                    <a href="#">Language Conventions</a>
-                    <div class="year-menu">
-                        <a href="#">2012</a>
-                        <a href="#">2013</a>
-                        <a href="#">2014</a>
-                        <a href="#">2015</a>
-                        <a href="#">2016</a>
-                    </div>
-                    <a href="#">Writing</a>
-                    <div class="year-menu">
-                        <a href="#">2012</a>
-                        <a href="#">2013</a>
-                        <a href="#">2014</a>
-                        <a href="#">2015</a>
-                        <a href="#">2016</a>
-                    </div>
-                </div>
-            </li>
-            <!-- Year 9 -->
-            <li>
-                <a href="#">Year 9</a>
-                <div class="submenu">
-                    <a href="#">Numeracy</a>
-                    <div class="year-menu">
-                        <a href="#">2012</a>
-                        <a href="#">2013</a>
-                        <a href="#">2014</a>
-                        <a href="#">2015</a>
-                        <a href="#">2016</a>
-                    </div>
-                    <a href="#">Reading</a>
-                    <div class="year-menu">
-                        <a href="#">2012</a>
-                        <a href="#">2013</a>
-                        <a href="#">2014</a>
-                        <a href="#">2015</a>
-                        <a href="#">2016</a>
-                    </div>
-                    <a href="#">Language Conventions</a>
-                    <div class="year-menu">
-                        <a href="#">2012</a>
-                        <a href="#">2013</a>
-                        <a href="#">2014</a>
-                        <a href="#">2015</a>
-                        <a href="#">2016</a>
-                    </div>
-                    <a href="#">Writing</a>
-                    <div class="year-menu">
-                        <a href="#">2012</a>
-                        <a href="#">2013</a>
-                        <a href="#">2014</a>
-                        <a href="#">2015</a>
-                        <a href="#">2016</a>
-                    </div>
-                </div>
-            </li>
+            <!-- Additional Years go here -->
         </ul>
     </div>
 
@@ -385,26 +259,6 @@
     <div class="content">
         <h2>Welcome to the Naplan Club Home Menu</h2>
         <p>Select a year from the navigation bar to get started.</p>
-        <p>It is also completely free, with no fees or charges!</p>
-    </div>
-
-    <!-- Floating Cards -->
-    <div class="card-container">
-        <!-- Card 1: About Our Website and Services -->
-        <div class="card">
-            <h3>What is NAPLAN</h3>
-            <p>NAPLAN (National Assessment Program – Literacy and Numeracy) is a nationwide test for Australian students in Years 3, 5, 7, and 9. It assesses skills in four key areas: Reading, Writing, Language Conventions (spelling, grammar, punctuation), and Numeracy. NAPLAN helps track student progress and identifies areas for improvement.</p>
-        </div>
-        <!-- Card 2: Immediate Results & Marks -->
-        <div class="card">
-            <h3>tests on this website</h3>
-            <p>Our NAPLAN practice tests are sourced directly from the official NAPLAN website. They are designed to help students in Years 3, 5, 7, and 9 prepare effectively. With authentic materials covering Reading, Writing, Language Conventions, and Numeracy, we ensure a comprehensive and reliable preparation experience for every student.</p>
-        </div>
-        <!-- Card 3: Free Payment Plans & Services -->
-        <div class="card">
-            <h3>My name is shoaib</h3>
-            <p>Prepare for NAPLAN with our free, digital practice tests! All tests are timed, simulating real exam conditions, and come with detailed performance reports to track progress. Accessible online, our platform ensures convenient, comprehensive, and effective preparation for students in Years 3, 5, 7, and 9.</p>
-        </div>
     </div>
 
 </body>
