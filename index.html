@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naplan Club</title>
     <style>
-        /* Body style */
+        /* Body styling */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #e5e5e5;
+            background-color: #f3f3f3;
             color: #333;
         }
 
-        /* Header Section */
+        /* Header section */
         .header {
             background-color: #2196F3;
             color: white;
@@ -24,36 +24,14 @@
 
         .header h1 {
             margin: 0;
-            font-size: 32px;
+            font-size: 36px;
         }
 
-        /* Button Styles */
-        .buttons {
-            margin-top: 15px;
-        }
-
-        .buttons button {
-            background-color: #333;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            margin: 5px;
-            cursor: pointer;
-            border-radius: 5px;
-            font-size: 16px;
-            transition: background-color 0.3s ease;
-        }
-
-        .buttons button:hover {
-            background-color: #555;
-        }
-
-        /* Navigation Bar */
+        /* Navigation bar */
         .nav-bar {
             background-color: #333;
             padding: 10px 0;
             text-align: center;
-            position: relative;
         }
 
         .nav-bar ul {
@@ -66,16 +44,15 @@
         .nav-bar li {
             position: relative;
             display: inline-block;
+            margin: 0 15px;
         }
 
         .nav-bar a {
             text-decoration: none;
             color: white;
             padding: 12px 25px;
-            margin: 0 15px;
             display: inline-block;
             font-size: 18px;
-            border-radius: 5px;
             transition: background-color 0.3s ease;
         }
 
@@ -83,7 +60,7 @@
             background-color: #555;
         }
 
-        /* Submenu Styling */
+        /* Submenu and Year menu styling */
         .submenu {
             display: none;
             position: absolute;
@@ -91,12 +68,11 @@
             left: 0;
             background-color: #444;
             min-width: 200px;
-            text-align: left;
             z-index: 1;
         }
 
         .submenu a {
-            padding: 12px 20px;
+            padding: 10px 20px;
             display: block;
             color: white;
         }
@@ -105,91 +81,56 @@
             background-color: #555;
         }
 
-        /* Submenu appears on hover */
-        .nav-bar li:hover .submenu {
-            display: block;
-        }
-
-        /* Year menu appears on the right */
-        .year-menu {
+        .submenu .year-menu {
             display: none;
             position: absolute;
             top: 0;
             left: 100%;
             background-color: #555;
             min-width: 150px;
-            text-align: left;
-            z-index: 2;
         }
 
-        .year-menu a {
-            padding: 12px 15px;
+        .submenu .year-menu a {
+            padding: 10px 15px;
+        }
+
+        /* Show dropdown menus on hover */
+        .nav-bar li:hover > .submenu {
             display: block;
-            color: white;
         }
 
-        .year-menu a:hover {
-            background-color: #666;
-        }
-
-        /* Show year menu on hover of subject */
         .submenu a:hover + .year-menu,
         .year-menu:hover {
             display: block;
         }
 
-        /* Ensure submenu and year-menu stay visible when hovered */
-        .nav-bar li:hover .submenu:hover {
-            display: block;
-        }
-
-        /* Remove gaps between submenu and year-menu */
-        .submenu, .year-menu {
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Content Section */
-        .content {
-            padding: 30px;
-            text-align: center;
-        }
-
-        .content h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
-
-        .content p {
-            font-size: 18px;
-            color: #666;
-        }
-
-        /* Floating Cards */
+        /* Card styling */
         .card-container {
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
             padding: 30px;
         }
 
         .card {
-            background-color: #fff;
+            background-color: white;
             padding: 20px;
-            margin: 15px;
+            border-radius: 10px;
             width: 250px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .card:hover {
             transform: translateY(-10px);
-            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
         }
 
         .card h3 {
             font-size: 22px;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
 
         .card p {
@@ -197,28 +138,31 @@
             color: #666;
         }
 
-        /* Responsive Design */
+        /* Responsive design */
         @media (max-width: 768px) {
-            .buttons button {
-                width: 100%;
-                padding: 10px;
-                margin: 5px 0;
-            }
-
-            .nav-bar a {
-                display: block;
-                padding: 15px 0;
-                margin: 5px 0;
-            }
-
             .card-container {
                 flex-direction: column;
                 align-items: center;
             }
 
-            .card {
-                width: 90%;
-                margin: 10px 0;
+            .nav-bar li {
+                display: block;
+                margin: 0;
+            }
+
+            .nav-bar a {
+                display: block;
+                padding: 10px;
+            }
+
+            .submenu, .year-menu {
+                position: static;
+                display: none;
+            }
+
+            .nav-bar li:hover .submenu,
+            .submenu a:hover + .year-menu {
+                display: block;
             }
         }
     </style>
@@ -228,11 +172,6 @@
     <!-- Header Section -->
     <div class="header">
         <h1>Naplan Club</h1>
-        <div class="buttons">
-            <button onclick="alert('Login clicked')">Login</button>
-            <button onclick="alert('Register clicked')">Register</button>
-            <button onclick="alert('Logout clicked')">Logout</button>
-        </div>
     </div>
 
     <!-- Navigation Bar -->
@@ -243,40 +182,49 @@
                 <div class="submenu">
                     <a href="#">Numeracy</a>
                     <div class="year-menu">
-                        <a href="#">Year 3</a>
-                        <a href="#">Year 5</a>
-                        <a href="#">Year 7</a>
-                        <a href="#">Year 9</a>
+                        <a href="#">Grade 3</a>
+                        <a href="#">Grade 5</a>
+                        <a href="#">Grade 7</a>
+                        <a href="#">Grade 9</a>
                     </div>
                     <a href="#">Literacy</a>
+                    <div class="year-menu">
+                        <a href="#">Grade 3</a>
+                        <a href="#">Grade 5</a>
+                        <a href="#">Grade 7</a>
+                        <a href="#">Grade 9</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="#">Grades</a>
+                <div class="submenu">
+                    <a href="#">Grade 3</a>
+                    <a href="#">Grade 5</a>
+                    <a href="#">Grade 7</a>
+                    <a href="#">Grade 9</a>
                 </div>
             </li>
         </ul>
     </div>
 
-    <!-- Content Section -->
-    <div class="content">
-        <h2>Welcome to the Naplan Club Home Menu</h2>
-        <p>Explore resources tailored to every year level and subject.</p>
-    </div>
-
     <!-- Card Section -->
     <div class="card-container">
         <div class="card">
-            <h3>Year 3</h3>
-            <p>Resources and activities for Year 3 students.</p>
+            <h3>Your Information</h3>
+            <p>Welcome back! Keep track of your progress and upcoming challenges.</p>
         </div>
         <div class="card">
-            <h3>Year 5</h3>
-            <p>Explore practice papers and exercises for Year 5.</p>
+            <h3>Grade Levels</h3>
+            <p>Access content for all grades, from 3 to 9, in both Numeracy and Literacy.</p>
         </div>
         <div class="card">
-            <h3>Year 7</h3>
-            <p>Get ready with curated study material for Year 7.</p>
+            <h3>Challenges</h3>
+            <p>Practice and master key skills with our curated Naplan challenges.</p>
         </div>
         <div class="card">
-            <h3>Year 9</h3>
-            <p>Challenging resources for Year 9 students.</p>
+            <h3>Achievements</h3>
+            <p>Track your completed challenges and earn badges for your progress!</p>
         </div>
     </div>
 
